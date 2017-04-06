@@ -27,7 +27,7 @@ int main()
         printf("4- Calcular la resta (A-B)\n");
         printf("5- Calcular la division (A/B)\n");
         printf("6- Calcular la multiplicacion (A*B)\n");
-        printf("7- Calcular el factorial (A!)\n");
+        printf("7- Calcular el factorial del entero (A!)\n");
         printf("8- Calcular todas las operacione\n");
         printf("9- Salir\n");
 
@@ -70,7 +70,12 @@ int main()
                 break;
             case 7: // factorial
                 if (flag1 == 1) {
-                    printf("\n Factorial de A: %d", factorial((int)operandoUno));
+                        if (operandoUno > 12 || 0 > operandoUno) {
+                            printf("\n Error: Ingrese un número positivo menor o igual a 12");
+                        }
+                        else {
+                            printf("\n Factorial de A: %d", factorial((int)operandoUno));
+                        }
                 }
                 else {
                     printf("\n Error. Ingrese el operando A");
